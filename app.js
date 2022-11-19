@@ -18,14 +18,10 @@ function backdropNavbar() {
 }
 
 // When the user scrolls the page, execute backdropNavbar
-window.addEventListener('scroll', function () {
-  backdropNavbar()
-})
+window.addEventListener('scroll', backdropNavbar)
 
 // When the user load page calculate backdrop percent
-window.onload = function () {
-  backdropNavbar()
-}
+window.onload = backdropNavbar
 
 // Get email footer text
 const emailText = document.querySelector('.footer__text')

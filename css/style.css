@@ -422,6 +422,11 @@ strong {
   opacity: 0.85;
 }
 
+.nav .container {
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+
 .button {
   font-weight: bold;
   padding: 10px 20px;
