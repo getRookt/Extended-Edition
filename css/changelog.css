@@ -426,6 +426,9 @@ strong {
   --accordion-desc-margin: 25;
 }
 
+.changelog__list {
+  max-width: 56.25rem;
+}
 .changelog__li-item {
   scroll-margin-top: 8.3125rem;
 }
