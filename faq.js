@@ -2,6 +2,7 @@
 window.onload = () => {
   if (window.name == '#fullscreen') {
     document.querySelector('#fullscreen').scrollIntoView()
+    document.querySelector('#fullscreen').firstElementChild.click()
     window.name = 'opened'
   }
 }
