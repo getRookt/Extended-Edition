@@ -151,13 +151,13 @@ strong {
       -ms-flex: 1 1 33%;
           flex: 1 1 33%;
 }
-.nav__link .active {
+.nav__links .link.active {
   color: orangered;
   -webkit-transition: opacity ease-in-out 0.2s;
   -o-transition: opacity ease-in-out 0.2s;
   transition: opacity ease-in-out 0.2s;
 }
-.nav__link .active:hover {
+.nav__links .link.active:hover {
   opacity: 0.85;
 }
 .nav-img {
