@@ -22,7 +22,10 @@
       property="og:description"
       content="EXTENDED EDITION - сборка модов, приоритетной целью, которой являются стабильность, лорность и быстродействие. Освежите оригинал, чтобы он чувствовался приятнее, но при этом оставался все тем же нашим НОВЫМ ВЕГАСОМ."
     />
-    <meta property="og:image" content="https://getrookt.github.io/Extended-Edition/img/metaLogo.png" />
+    <meta
+      property="og:image"
+      content="https://getrookt.github.io/Extended-Edition/img/metaLogo.png"
+    />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -32,7 +35,10 @@
       property="twitter:description"
       content="EXTENDED EDITION - сборка модов, приоритетной целью, которой являются стабильность, лорность и быстродействие. Освежите оригинал, чтобы он чувствовался приятнее, но при этом оставался все тем же нашим НОВЫМ ВЕГАСОМ."
     />
-    <meta property="twitter:image" content="https://getrookt.github.io/Extended-Edition/img/metaLogo.png" />
+    <meta
+      property="twitter:image"
+      content="https://getrookt.github.io/Extended-Edition/img/metaLogo.png"
+    />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -41,47 +47,79 @@
   </head>
   <body>
     <!-- <div class="background"></div> -->
-    <div class="header-video">
-      <video autoplay muted loop id="background">
-        <source src="./video/desc.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <header>
-      <nav class="nav">
-        <div class="container">
-          <div class="nav__inner">
-            <div class="nav__title">
-              <a href="index.html" target=""><h1 class="active">Extended Edition</h1></a>
-            </div>
-            <div class="nav__links">
-              <a href="install.html" class="link">Установка</a>
-              <a href="donate.html" class="link">Донат</a>
-              <a href="faq.html" class="link">Помощь</a>
-              <a href="changelog.html" class="link">Чейнджлог</a>
-            </div>
-          </div>
+    <div class="nav-mobile">
+      <div class="nav-button">
+        <picture>
+          <source srcset="./img/ranger.avif" />
+          <img src="./img/ranger.webp" alt="Навигационная кнопка" />
+        </picture>
+      </div>
+      <div class="nav__inner">
+        <div class="nav__links">
+          <a href="index.html" class="link"><i class="fa-solid fa-house"></i></a>
+          <a href="install.html" class="link"><i class="fa-solid fa-download"></i></a>
+          <a href="donate.html" class="link"><i class="fa-solid fa-sack-dollar"></i></a>
+          <a href="faq.html" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i></a>
+          <a href="changelog.html" class="link"><i class="fa-solid fa-list"></i></a>
         </div>
-      </nav>
-    </header>
-    <section class="description">
-      <div class="container">
-        <div class="description__inner">
-          <div class="title">
-            <h1>
-              Погрузись в атмосферу<br />
-              ядерных пустошей
-            </h1>
-          </div>
-          <div class="description__text text">
-            <p>
-              Старый добрый Вегас в обновленной обертке и с прокачанным геймплеем.<br />Лучший
-              способ вернуться за снежными шарами для Мистера Хауса.
-            </p>
-          </div>
-          <a href="install.html" class="button description__button">Скачать</a>
+        <div class="nav__links nav__links_social">
+          <a
+            href="https://steamcommunity.com/sharedfiles/filedetails/?id=2283791696"
+            class="link"
+            target="_blank"
+            ><i class="fa-brands fa-steam"></i
+          ></a>
+          <a
+            href="https://discord.gg/ptqTPmGGrG
+            "
+            class="link"
+            target="_blank"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
         </div>
       </div>
-    </section>
+    </div>
+    <nav class="nav">
+      <div class="container">
+        <div class="nav__inner">
+          <div class="nav__title">
+            <a href="index.html" target=""><h1 class="active">Extended Edition</h1></a>
+          </div>
+          <div class="nav__links">
+            <a href="install.html" class="link">Установка</a>
+            <a href="donate.html" class="link">Донат</a>
+            <a href="faq.html" class="link">Помощь</a>
+            <a href="changelog.html" class="link">Чейнджлог</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="header-video">
+        <video autoplay muted loop id="background">
+          <source src="./video/desc.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <section class="description">
+        <div class="container">
+          <div class="description__inner">
+            <div class="title">
+              <h1>
+                Погрузись в атмосферу<br />
+                ядерных пустошей
+              </h1>
+            </div>
+            <div class="description__text text">
+              <p>
+                Старый добрый Вегас в обновленной обертке и с прокачанным геймплеем.<br />Лучший
+                способ вернуться за снежными шарами для Мистера Хауса.
+              </p>
+            </div>
+            <a href="install.html" class="button description__button">Скачать</a>
+          </div>
+        </div>
+      </section>
+    </header>
     <section class="features">
       <div class="container">
         <div class="features__inner">
@@ -101,11 +139,11 @@
             <p>
               Получи новый опыт от старой игры с расширенными возможностями!<br />
               <span>Extended Edition</span> - сборка модов, приоритетной целью, которой являются
-              <strong>стабильность, лорность и быстродействие</strong>.
+              <br /><strong>стабильность, лорность и быстродействие</strong>.
             </p>
             <p>
               Освежите оригинал, чтобы он чувствовался приятнее, но при этом оставался все тем же
-              нашим <span>Новым Вегасом</span>.
+              нашим <br /><span>Новым Вегасом</span>.
             </p>
           </div>
         </div>

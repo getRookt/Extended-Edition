@@ -44,7 +44,7 @@ function accordionDescCalc() {
 }
 
 // Calculate height for each accordion on window load
-window.onload = accordionDescCalc()
+window.addEventListener('load', accordionDescCalc)
 
 // Calculate height for each accordion on window resize
 window.onresize = accordionDescCalc

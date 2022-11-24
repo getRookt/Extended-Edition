@@ -44,15 +44,82 @@ strong {
   z-index: 100;
   top: 0;
   position: sticky;
-  -webkit-transition: left 0.3s ease-in-out;
-  -o-transition: left 0.3s ease-in-out;
-  transition: left 0.3s ease-in-out;
+  -webkit-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
 }
-.nav.active {
+.nav-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 100;
+  position: fixed;
+  padding: 1.25rem;
   -webkit-transition: left 0.3s ease-in-out;
   -o-transition: left 0.3s ease-in-out;
   transition: left 0.3s ease-in-out;
-  left: 0px;
+  display: flex;
+  left: -31.25rem;
+  top: 0;
+  overflow: hidden;
+}
+.nav-mobile .nav__inner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 85%;
+}
+.nav-mobile .nav__inner .nav__links {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 5%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.nav-mobile .nav__inner .nav__links_social {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  row-gap: 5%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.nav-mobile .nav__inner .nav__links .link {
+  font-size: 2.5rem;
+}
+.nav-mobile.active {
+  -webkit-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+  left: 0;
 }
 .nav .container {
   display: -webkit-box;
@@ -66,17 +133,23 @@ strong {
           backdrop-filter: blur(5px) brightness(75%);
 }
 .nav-button {
-  -webkit-transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  -o-transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  -webkit-transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -o-transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   opacity: 0.7;
   position: fixed;
   top: 0.625rem;
   left: -6.25rem;
   z-index: 100;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .nav-button.active {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
   opacity: 1;
 }
 .nav-button img {
@@ -323,9 +396,13 @@ strong {
 }
 .accordion-desc video {
   width: 100%;
+  height: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: fill;
      object-fit: fill;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  border: 3px solid #222;
 }
 .accordion-desc img {
   aspect-ratio: 16/9;
@@ -372,7 +449,7 @@ strong {
   color: orangered;
 }
 .footer__links {
-  width: 24.75rem;
+  min-width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -420,9 +497,9 @@ strong {
   text-decoration: none;
   color: #ccc;
   font-family: "Montserrat", sans-serif;
-  -webkit-transition: ease-in-out 0.2s;
-  -o-transition: ease-in-out 0.2s;
-  transition: ease-in-out 0.2s;
+  -webkit-transition: color ease-in-out 0.2s;
+  -o-transition: color ease-in-out 0.2s;
+  transition: color ease-in-out 0.2s;
   text-transform: none;
 }
 .footer__text:hover {
@@ -597,10 +674,6 @@ strong {
 .donate__list:hover .donate__list-button {
   visibility: visible;
   opacity: 1;
-}
-
-.footer {
-  margin-bottom: 0;
 }
 
 .heart {

@@ -47,26 +47,56 @@
     <link rel="stylesheet" href="css/mediaqueries.css" />
   </head>
   <body>
-    <header>
-      <nav class="nav">
-        <div class="nav-img">
-          <img src="./img/back2.webp" alt="" />
+    <div class="nav-mobile">
+      <div class="nav-button">
+        <picture>
+          <source srcset="./img/ranger.avif" />
+          <img src="./img/ranger.webp" alt="Навигационная кнопка" />
+        </picture>
+      </div>
+      <div class="nav__inner">
+        <div class="nav__links">
+          <a href="index.html" class="link"><i class="fa-solid fa-house"></i></a>
+          <a href="install.html" class="link"><i class="fa-solid fa-download"></i></a>
+          <a href="donate.html" class="link"><i class="fa-solid fa-sack-dollar"></i></a>
+          <a href="faq.html" class="link"><i class="fa-sharp fa-solid fa-circle-info"></i></a>
+          <a href="changelog.html" class="link"><i class="fa-solid fa-list"></i></a>
         </div>
-        <div class="container">
-          <div class="nav__inner">
-            <div class="nav__title">
-              <a href="index.html" target=""><h1>Extended Edition</h1></a>
-            </div>
-            <div class="nav__links">
-              <a href="install.html" class="link">Установка</a>
-              <a href="donate.html" class="link">Донат</a>
-              <a href="faq.html" class="link">Помощь</a>
-              <a href="changelog.html" class="link active">Чейнджлог</a>
-            </div>
+        <div class="nav__links nav__links_social">
+          <a
+            href="https://steamcommunity.com/sharedfiles/filedetails/?id=2283791696"
+            class="link"
+            target="_blank"
+            ><i class="fa-brands fa-steam"></i
+          ></a>
+          <a
+            href="https://discord.gg/ptqTPmGGrG
+            "
+            class="link"
+            target="_blank"
+            ><i class="fa-brands fa-discord"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav">
+      <div class="nav-img">
+        <img src="./img/back2.webp" alt="" />
+      </div>
+      <div class="container">
+        <div class="nav__inner">
+          <div class="nav__title">
+            <a href="index.html" target=""><h1>Extended Edition</h1></a>
+          </div>
+          <div class="nav__links">
+            <a href="install.html" class="link">Установка</a>
+            <a href="donate.html" class="link">Донат</a>
+            <a href="faq.html" class="link">Помощь</a>
+            <a href="changelog.html" class="link active">Чейнджлог</a>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
     <section class="changelog section">
       <div class="container">
         <div class="changelog__inner section__inner">
