@@ -9,19 +9,7 @@ const marginSize =
   getComputedStyle(document.documentElement).getPropertyValue('--accordion-desc-margin') / 16 +
   'rem'
 
-// Add to each Accordion title event listener to open the accordion on the click
-accItems.forEach((accItem, i, accDesc) => {
-  accDesc = accItem.nextElementSibling
-  accItem.addEventListener('click', () => {
-    accItem.style.color = accItem.style.color == 'white' ? '#ccc' : 'white'
-    accDesc.style.opacity = accDesc.style.opacity == '' ? '1' : ''
-    accDesc.style.marginTop = accDesc.style.marginTop == '' ? marginSize : ''
-    accDesc.style.height = accDesc.style.height == '' ? itemsHeight[i] / 16 + 'rem' : ''
-  })
-})
-
 // Accordion desc calculate function
-
 function accordionDescCalc() {
   // Clear array with heights
   itemsHeight.length = 0
@@ -42,12 +30,6 @@ function accordionDescCalc() {
     }
   })
 }
-
-// Calculate height for each accordion on window load
-window.addEventListener('load', accordionDescCalc)
-
-// Calculate height for each accordion on window resize
-window.onresize = accordionDescCalc
 
 // Open element by click on link
 function openElement(element, link) {
@@ -72,3 +54,21 @@ function openElement(element, link) {
     }, transDur)
   }
 }
+
+// Calculate height for each accordion on window load
+window.addEventListener('load', accordionDescCalc)
+window.addEventListener('load', () => {
+  // Add to each Accordion title event listener to open the accordion on the click
+  accItems.forEach((accItem, i, accDesc) => {
+    accDesc = accItem.nextElementSibling
+    accItem.addEventListener('click', () => {
+      accItem.style.color = accItem.style.color == 'white' ? '#ccc' : 'white'
+      accDesc.style.opacity = accDesc.style.opacity == '' ? '1' : ''
+      accDesc.style.marginTop = accDesc.style.marginTop == '' ? marginSize : ''
+      accDesc.style.height = accDesc.style.height == '' ? itemsHeight[i] / 16 + 'rem' : ''
+    })
+  })
+})
+
+// Calculate height for each accordion on window resize
+window.onresize = accordionDescCalc

@@ -176,8 +176,8 @@ strong {
   font-family: "Oxanium", sans-serif;
   font-size: 1.5rem;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 33%;
-          flex: 1 1 33%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   text-transform: uppercase;
 }
 .nav__title a {
@@ -221,8 +221,8 @@ strong {
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 33%;
-          flex: 1 1 33%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 .nav__links .link.active {
   color: orangered;
@@ -449,13 +449,18 @@ strong {
   color: orangered;
 }
 .footer__links {
-  min-width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 2.1875rem;
+     -moz-column-gap: 2.1875rem;
+          column-gap: 2.1875rem;
 }
 .footer__links_social {
   display: -webkit-box;
@@ -465,13 +470,9 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-          flex: 1 1 0;
+  -webkit-column-gap: 1.5625rem;
+     -moz-column-gap: 1.5625rem;
+          column-gap: 1.5625rem;
 }
 .footer__links .link {
   display: -webkit-box;
@@ -488,9 +489,6 @@ strong {
 }
 .footer__author {
   text-align: center;
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 0px;
-          flex: 2 1 0;
 }
 .footer__text {
   font-size: 0.9375rem;
@@ -506,7 +504,7 @@ strong {
   color: white;
 }
 .footer__text::after {
-  content: "Email скопирован в буфер обмена!";
+  content: "Email скопирован!";
   display: block;
   margin-top: 5px;
   color: white;

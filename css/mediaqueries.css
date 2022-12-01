@@ -193,3 +193,14 @@ body {
     display: flex;
   }
 }
+@media screen and (max-width: 62em) {
+  .nav__title {
+    font-size: 1.25rem;
+  }
+  .nav__links .link {
+    font-size: 1.09375rem;
+  }
+  .footer__title a h1 {
+    font-size: 1.875rem;
+  }
+}
