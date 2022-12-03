@@ -92,9 +92,6 @@ body {
   .footer__text {
     font-size: 1.25rem;
   }
-  .footer__text:after {
-    font-size: 1.0625rem;
-  }
   .traits__block {
     -webkit-box-pack: center;
         -ms-flex-pack: center;

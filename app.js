@@ -35,7 +35,11 @@ const emailText = document.querySelector('.footer__text')
 // Email copy to clipboard after click
 emailText.addEventListener('click', function () {
   navigator.clipboard.writeText('alan2008358@gmail.com')
-  emailText.style.setProperty('--email-Copy-FZ', '0.7rem')
+  if (window.innerWidth > 768) {
+    emailText.style.setProperty('--email-Copy-FZ', '0.7rem')
+  } else {
+    emailText.style.setProperty('--email-Copy-FZ', '1.0625rem')
+  }
 })
 
 // Get Mobile NavBar Button
