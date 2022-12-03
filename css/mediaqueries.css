@@ -44,6 +44,9 @@ body {
     z-index: 1000;
     left: 1.25rem;
   }
+  .section__list {
+    padding-right: 0;
+  }
   .footer {
     margin-bottom: 3.125rem;
     -webkit-box-pack: center;
@@ -88,6 +91,9 @@ body {
   }
   .footer__text {
     font-size: 1.25rem;
+  }
+  .footer__text:after {
+    font-size: 1.0625rem;
   }
   .traits__block {
     -webkit-box-pack: center;
@@ -182,7 +188,7 @@ body {
   }
   .donate__list {
     width: 100%;
-    margin-top: 1.25rem;
+    margin-top: 3.125rem;
   }
   .donate__column.qiwi {
     display: none;
@@ -192,6 +198,9 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+  .donate__columns {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 62em) {
   .nav__title {
@@ -200,7 +209,31 @@ body {
   .nav__links .link {
     font-size: 1.09375rem;
   }
+}
+@media screen and (min-width: 48em) and (max-width: 75em) {
+  .table__title {
+    font-size: 1.0625rem;
+  }
+  .table ol {
+    font-size: 0.875rem;
+  }
   .footer__title a h1 {
     font-size: 1.875rem;
+  }
+  .donate__inner {
+    max-width: 75rem;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .donate__list {
+    max-width: 45.5rem;
+    width: 100%;
+    margin-top: 3.125rem;
   }
 }

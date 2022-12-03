@@ -44,9 +44,6 @@ strong {
   z-index: 100;
   top: 0;
   position: sticky;
-  -webkit-transition: top 0.3s ease-in-out;
-  -o-transition: top 0.3s ease-in-out;
-  transition: top 0.3s ease-in-out;
 }
 .nav-mobile {
   display: -webkit-box;
@@ -191,18 +188,18 @@ strong {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s;
-  -o-transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s;
-  transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s;
+  -webkit-transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s, font-size ease-in-out 0.3s;
+  -o-transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s, font-size ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s, font-size ease-in-out 0.3s;
 }
 .nav__title a h1:hover {
   color: orangered;
 }
 .nav__title .active {
   color: orangered;
-  -webkit-transition: opacity ease-in-out 0.2s;
-  -o-transition: opacity ease-in-out 0.2s;
-  transition: opacity ease-in-out 0.2s;
+  -webkit-transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s, font-size ease-in-out 0.3s;
+  -o-transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s, font-size ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.2s, color ease-in-out 0.2s, font-size ease-in-out 0.3s;
 }
 .nav__title .active:hover {
   opacity: 0.85;
@@ -274,7 +271,8 @@ strong {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 48.125rem;
+  max-width: 56.25rem;
+  padding-right: 3.125rem;
   width: 100%;
 }
 .section hr {
@@ -287,9 +285,9 @@ strong {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
-  -webkit-transition: color ease-in-out 0.2s;
-  -o-transition: color ease-in-out 0.2s;
-  transition: color ease-in-out 0.2s;
+  -webkit-transition: color ease-in-out 0.2s, font-size ease-in-out 0.3s;
+  -o-transition: color ease-in-out 0.2s, font-size ease-in-out 0.3s;
+  transition: color ease-in-out 0.2s, font-size ease-in-out 0.3s;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
@@ -304,11 +302,12 @@ strong {
 .table {
   font-family: "Roboto", sans-serif;
   background-color: #222;
-  width: 18.75rem;
+  max-width: 18.75rem;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding-left: 25px;
+  padding: 0 1.5625rem;
   border-radius: 10px;
   position: sticky;
   top: 105px;
@@ -318,10 +317,10 @@ strong {
   color: white;
   font-size: 1.25rem;
   font-weight: bold;
-  margin-top: 25px;
+  margin-top: 1.5625rem;
 }
 .table ol {
-  margin: 20px 0;
+  margin: 1.25rem 0;
   color: white;
   list-style-position: inside;
   line-height: 2.3;
@@ -440,9 +439,9 @@ strong {
   color: white;
 }
 .footer__title a h1 {
-  -webkit-transition: ease-in-out 0.2s;
-  -o-transition: ease-in-out 0.2s;
-  transition: ease-in-out 0.2s;
+  -webkit-transition: color ease-in-out 0.2s, font-size ease-in-out 0.3s;
+  -o-transition: color ease-in-out 0.2s, font-size ease-in-out 0.3s;
+  transition: color ease-in-out 0.2s, font-size ease-in-out 0.3s;
   font-size: 2.34375rem;
 }
 .footer__title a h1:hover {
@@ -514,21 +513,29 @@ strong {
   transition: font-size 0.2s ease-in-out;
 }
 
-.donate__columns {
-  height: 40rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+.donate__inner {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.donate__columns {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  row-gap: 3.125rem;
 }
 .donate__column {
   max-width: 45.5rem;
