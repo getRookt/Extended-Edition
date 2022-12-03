@@ -217,6 +217,9 @@ body {
   .table ol {
     font-size: 0.875rem;
   }
+  .table a {
+    font-size: 0.875rem;
+  }
   .footer__title a h1 {
     font-size: 1.875rem;
   }
