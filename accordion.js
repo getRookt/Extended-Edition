@@ -49,9 +49,11 @@ function openElement(element, link) {
 
   // Click on element title so it will open the accordion of it
   linkId.onclick = function () {
-    setTimeout(() => {
-      elementId.click()
-    }, transDur)
+    if (elementId.nextElementSibling.style.height == 0) {
+      setTimeout(() => {
+        elementId.click()
+      }, transDur)
+    }
   }
 }
 
