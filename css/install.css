@@ -524,7 +524,7 @@ strong {
 }
 .torrent-version:before {
   width: 100%;
-  content: "20.11.22";
+  content: "06.12.22";
   position: absolute;
   text-align: center;
   font-size: 1.0625rem;
