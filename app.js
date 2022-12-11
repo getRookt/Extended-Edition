@@ -27,7 +27,7 @@ window.addEventListener('scroll', backdropNavbar)
 window.addEventListener('load', backdropNavbar)
 
 // When user resize the page calculate backdrop percent
-window.onresize = backdropNavbar
+window.addEventListener('resize', backdropNavbar)
 
 // Get email footer text
 const emailText = document.querySelector('.footer__text')
