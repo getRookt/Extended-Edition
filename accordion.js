@@ -10,7 +10,7 @@ const marginSize =
   'rem'
 
 // Accordion desc calculate function
-function accordionDescCalc() {
+function accordionDescCalc(onLoad) {
   // Clear array with heights
   itemsHeight.length = 0
   // Edit height for every accordion desc
@@ -27,6 +27,15 @@ function accordionDescCalc() {
       accDesc.style.height = 'auto'
       itemsHeight.push(accDesc.offsetHeight)
       accDesc.style.height = ''
+    }
+    // Add to each Accordion title event listener to open the accordion on the click only on page load
+    if (onLoad) {
+      accItem.addEventListener('click', () => {
+        accItem.style.color = accItem.style.color == 'white' ? '#ccc' : 'white'
+        accDesc.style.opacity = accDesc.style.opacity == '' ? '1' : ''
+        accDesc.style.marginTop = accDesc.style.marginTop == '' ? marginSize : ''
+        accDesc.style.height = accDesc.style.height == '' ? itemsHeight[i] / 16 + 'rem' : ''
+      })
     }
   })
 }
@@ -48,7 +57,7 @@ function openElement(element, link) {
     ) * 1500
 
   // Click on element title so it will open the accordion of it
-  linkId.onclick = function () {
+  linkId.onclick = () => {
     if (elementId.nextElementSibling.style.height == 0) {
       setTimeout(() => {
         elementId.click()
@@ -58,19 +67,9 @@ function openElement(element, link) {
 }
 
 // Calculate height for each accordion on window load
-window.addEventListener('load', accordionDescCalc)
 window.addEventListener('load', () => {
-  // Add to each Accordion title event listener to open the accordion on the click
-  accItems.forEach((accItem, i, accDesc) => {
-    accDesc = accItem.nextElementSibling
-    accItem.addEventListener('click', () => {
-      accItem.style.color = accItem.style.color == 'white' ? '#ccc' : 'white'
-      accDesc.style.opacity = accDesc.style.opacity == '' ? '1' : ''
-      accDesc.style.marginTop = accDesc.style.marginTop == '' ? marginSize : ''
-      accDesc.style.height = accDesc.style.height == '' ? itemsHeight[i] / 16 + 'rem' : ''
-    })
-  })
+  accordionDescCalc(true)
 })
 
 // Calculate height for each accordion on window resize
-window.onresize = accordionDescCalc
+window.addEventListener('resize', accordionDescCalc)
