@@ -154,7 +154,7 @@ body {
     width: 100%;
   }
   .section__list * {
-    scroll-margin-top: 14.5625rem;
+    scroll-margin-top: 2.0625rem;
     text-align: center;
   }
   .hotfix {
