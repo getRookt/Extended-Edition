@@ -72,4 +72,6 @@ window.addEventListener('load', () => {
 })
 
 // Calculate height for each accordion on window resize
-window.addEventListener('resize', accordionDescCalc)
+window.addEventListener('resize', () => {
+  accordionDescCalc(false)
+})
