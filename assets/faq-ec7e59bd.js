@@ -1,1 +1,0 @@
-import{__tla as e}from"./app-5b620890.js";import"./viewer-40f002ee.js";import"./accordion-c53ee2c7.js";Promise.all([(()=>{try{return e}catch{}})()]).then(async()=>{window.name=="#fullscreen"&&(document.querySelector("#fullscreen").scrollIntoView(),document.querySelector("#fullscreen").firstElementChild.click(),window.name="")});
